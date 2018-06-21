@@ -11,9 +11,14 @@
 |
 */
 
-Route::get('/ViewInicial/ViewConsultaFuncionario', 'ControllerFuncionario@getSqlPadraoConsultaFuncionario');
-Route::get('/ViewInicial/ViewConsultaTerritorio', 'ControllerTerritorio@getSqlPadraoConsultaTerritorio');
-Route::get('/ViewInicial/ViewConsultaRegiao', 'ControllerRegiao@getSqlPadraoConsultaRegiao');
+Route::get('/ViewInicial'                                  , 'ControllerPrincipal@getViewInicial');
+Route::get('/ViewInicial/ViewCadastroFuncionario'          , 'ControllerPrincipal@getViewCadastroFuncionario');
+Route::get('/ViewInicial/ViewCadastroTerritorio'           , 'ControllerPrincipal@getViewCadastroTerritorio');
+Route::get('/ViewInicial/ViewCadastroRegiao'               , 'ControllerPrincipal@getViewCadastroRegiao');
+Route::get('/ViewInicial/ViewConsultaFuncionario'          , 'ControllerFuncionario@getSqlPadraoConsultaFuncionario');
+Route::get('/ViewInicial/ViewConsultaTerritorio'           , 'ControllerTerritorio@getSqlPadraoConsultaTerritorio');
+Route::get('/ViewInicial/ViewConsultaRegiao'               , 'ControllerRegiao@getSqlPadraoConsultaRegiao');
+Route::get('/ViewInicial/ViewConsultaFuncionarioTerritorio', 'ControllerFuncionario@getSqlConultaFuncionarioTerritorio');
         
 
 //Route::get('/produto/mostra/{id}', function($id){
@@ -22,5 +27,3 @@ Route::get('/ViewInicial/ViewConsultaRegiao', 'ControllerRegiao@getSqlPadraoCons
 //});
 //
 //Route::get('/produto/novo', 'ProdutoController@novo');
-
-Route::get('/ViewInicial', 'ControllerPrincipal@getViewInicial');

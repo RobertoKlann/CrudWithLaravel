@@ -14,7 +14,7 @@
     <title>North Wind</title>
     </head>
     <body>
-        <div style="background-color: #F5F5F5; ">
+        <div style="background-color: #F5F5F5;">
             <div class ="container">
                 <div class ="navbar-header">
                     <a href = "/ViewInicial/" class ="navbar-brand">North Wind</a>
@@ -25,30 +25,38 @@
                           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Funcionário</a>
                           <div class="dropdown-menu">
                             <a class="dropdown-item" href="/ViewInicial/ViewConsultaFuncionario">Consultar Funcionários</a>   
-                            <a class="dropdown-item" href="">Cadastrar Funcionários</a>
-                            <a class="dropdown-item" href="">Funcionário x Território</a>
+                            <a class="dropdown-item" href="/ViewInicial/ViewCadastroFuncionario">Cadastrar Funcionários</a>
+                            <a class="dropdown-item" href="/ViewInicial/ViewConsultaFuncionarioTerritorio">Funcionário x Território</a>
                           </div>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Território</a>
                             <div class="dropdown-menu">
                                 <a class="nav-link disabled" href="/ViewInicial/ViewConsultaTerritorio">Consultar Território</a>
-                                <a class="nav-link disabled" href="">Cadastrar Território</a>
+                                <a class="nav-link disabled" href="/ViewInicial/ViewCadastroTerritorio">Cadastrar Território</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Região</a>
                             <div class="dropdown-menu">
                                 <a class="nav-link disabled" href="/ViewInicial/ViewConsultaRegiao">Consultar Região</a>
-                                <a class="nav-link disabled" href="">Cadastrar Região</a>
+                                <a class="nav-link disabled" href="/ViewInicial/ViewCadastroRegiao">Cadastrar Região</a>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
+        <!-- Conteudo da pagina -->
         <div class="container">
             @yield('content')
+        </div>
+     <!-- Footer de todas as paginas -->
+        <div class="container">
+              <div class="page-header">
+                <h1>NORTH WIND</h1>
+              </div>
+              <p class="lead">Eu adoraria mudar o mundo, mas não me deram o código-fonte.</p>
         </div>
       
     <!-- Optional JavaScript -->
