@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
+use Request;
 
 /**
  * Controllador do Funcionário
@@ -29,6 +30,24 @@ class ControllerFuncionario extends Controller {
     public function getSqlConultaFuncionarioTerritorio() {
         $bFuncionariosTerritorios = DB::select('SELECT * FROM funcionarios_territorios JOIN territorios USING(IDTerritorio) JOIN funcionarios USING(IDFuncionario)');
         return view('ViewConsultaFuncionarioTerritorio')->with('funcionarios_territorios', $bFuncionariosTerritorios);
+    }
+    
+    /**
+     * Realiza o INSERT no Banco de Dados.
+     * 
+     * @return Object
+     */
+    public function insereFuncionario() {
+        $aCampos = Request::all();
+        DB::insert("INSERT INTO funcionarios(IDFuncionario, Nome, Sobrenome, Titulo, DataNac, DataAdmissao, Endereco, Cidade, Regiao, Cep, Pais, TelefoneResidencial) VALUES({$aCampos['IDFuncionario']}, '{$aCampos['Nome']}', '{$aCampos['Sobrenome']}', '{$aCampos['Titulo']}', '{$aCampos['DataNac']}', '{$aCampos['DataAdmissao']}','{$aCampos['Endereco']}', '{$aCampos['Cidade']}','{$aCampos['Regiao']}', '{$aCampos['Cep']}', '{$aCampos['Pais']}', '{$aCampos['TelefoneResidencial']}')");
+        
+        return view('ViewProdutoAdicionado')->with('Nome', $aCampos['Nome']);
+    }
+    
+    public function deleteFuncionario($IDFuncionario) {
+        DB::table('funcionarios_territorios')->where('IDFuncionario', '=', $IDFuncionario)->delete();
+        DB::table('funcionarios')->where('IDFuncionario', '=', $IDFuncionario)->delete();
+        return redirect()->action('ControllerFuncionario@getSqlPadraoConsultaFuncionario');
     }
     
 }

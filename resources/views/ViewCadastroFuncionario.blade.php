@@ -6,7 +6,7 @@
     <h2>Cadastro de Funcionario</h2>
 </center>
 <div class = "divFormCadFuncionarios">
-    <form class = "container" action = "/Roberto/WEB-II---Projeto-Dois/Controller/ControllerFuncionarioAdd.php" method = "POST">
+    <form class = "container" action="/ViewInicial/insereFuncionario">
         <div class = "divGambiarra01">
             <div class = "container">
                 <div class="form-group">
@@ -42,7 +42,7 @@
             <div class = "container">
                 <div class="form-group">
                     <label for="endereco">Endereço</label>
-                    <input type="text" class="form-control" name="Endereço" placeholder="Endereço">
+                    <input type="text" class="form-control" name="Endereco" placeholder="Endereço">
                 </div>
                 <div class="form-group">
                     <label for="cidade">Cidade</label>
@@ -50,7 +50,7 @@
                 </div>
                 <div class="form-group">
                     <label for="regiao">Região</label>
-                    <input type="text" class="form-control" name="Região" placeholder="Região">
+                    <input type="text" class="form-control" name="Regiao" placeholder="Região">
                 </div>
                 <div class="form-group">
                     <label for="cep">Cep</label>

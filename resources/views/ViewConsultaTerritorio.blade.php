@@ -17,7 +17,7 @@
             <td><?= $oTerritorio->IDRegiao ?></td>
             <td><?= $oTerritorio->DescricaoRegiao ?></td>
             <td>
-                <a href="">
+                <a href="{{action('ControllerTerritorio@getConsultaTerritorioFromUpdate', $oTerritorio->IDTerritorio)}}">
                     <i class="far fa-edit"></i>
                 </a>
                 <a href="">

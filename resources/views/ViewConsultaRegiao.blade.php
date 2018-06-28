@@ -13,15 +13,15 @@
             <td><?= $oRegiao->IDRegiao ?></td>
             <td><?= $oRegiao->DescricaoRegiao ?></td>
             <td>
-                <a href="">
+                <a href="{{action('ControllerRegiao@getConsultaRegiaoFromUpdate', $oRegiao->IDRegiao)}}">
                     <i class="far fa-edit"></i>
                 </a>
-                <a href="">
+                <a href="{{action('ControllerRegiao@deleteRegiao', $oRegiao->IDRegiao)}}">
                     <i class="far fa-file-excel"></i>
                 </a>
             </td>
         </tr>
-    <?php endforeach ?>
+        <?php endforeach ?>
     
 </table>
 <?php @stop ?>

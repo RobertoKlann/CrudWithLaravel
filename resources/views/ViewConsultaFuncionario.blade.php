@@ -28,7 +28,7 @@
                 <a href="">
                     <i class="far fa-edit"></i>
                 </a>
-                <a href="">
+                <a href="{{action('ControllerFuncionario@deleteFuncionario', $oFunc->IDFuncionario)}}">
                     <i class="far fa-file-excel"></i>
                 </a>
             </td>
